@@ -1,0 +1,359 @@
+/* Resetting default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+}
+
+body {
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    margin: 5%;
+    padding: 0;
+    font-size: 1.125em; /* 18px */
+    background-color:#00274C;
+    color: #333; /* Soft black for readability */
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile first single column layout */
+    grid-gap: 20px;
+    align-items: start;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+/* Main structure styling */
+header, footer, main {
+    grid-column: 1 / -1;
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 10px; /* Rounded edges for modern feel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #004165; /* Strong color for branding */
+    color: white;
+    padding: 1.5em 0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Heading styles */
+#main-content h1 {
+    color: #004165;
+    font-family: 'Roboto', serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em; /* Adjusted for mobile */
+    margin: 0.5em 0; /* Consistent margin */
+    font-weight: 700;
+    font-family: 'Roboto', serif; /* Elegant serif font for headings */
+}
+
+
+
+h2, h3 {
+    color: #004165;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 0.75em 0;
+}
+
+/* Paragraph styles */
+p {
+    /* padding-bottom: 1em;
+    word-wrap: normal;
+    line-height: 1.5; */
+    margin-bottom: 1.5em; /* Space out paragraphs */
+    word-wrap: normal;
+    color: #555; /* Dark gray for text */
+}
+
+.descr {
+    color: #d1f7f1;
+}
+
+/* Skip to Main Content Link */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: -999px;
+    background: #004165;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 100;
+    text-align: center;
+    transition: top 0.3s ease-in-out; /* Smooth appearance */
+}
+
+.skip-link:focus {
+    left: 0;
+    top: 0;
+}
+
+
+/* Navigation Styles */
+/* nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+    background-color: rgba(255, 255, 255, 0.8);
+} */
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+}
+
+nav a {
+    font-size: 1.2em; /* Ensures links are clickable */
+    padding: 10px 20px;
+    background-color: #004165;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+
+}
+
+nav a:hover {
+    background-color: #006494;
+}
+
+
+/* nav a.active {
+    background-color: rgb(14, 92, 92);
+    color: white;
+} */
+
+nav ul li a.active {
+    background-color: #FFCB05;
+    color: #004165;
+    font-weight: bold;
+    border-bottom: 3px solid #004165; /* Adds a bottom border to indicate active page */
+    border-radius: 5px;
+}
+
+/* nav ul li a {
+    text-align: center;
+    padding: 10px;
+} */
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background-color: #F7FAFC;
+    font-size: 0.9em;
+    color: #555;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for footer */
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Accessibility styles */
+a:focus, button:focus {
+    outline: 3px solid #004165;
+    outline-offset: 2px;
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Default grid layout for mobile */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 7px; /* space between images */
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #091c27;
+    color: #ddd;
+}
+
+body.dark main {
+    background-color: #004165;
+    color: #ddd;
+}
+
+body.dark footer {
+    background-color: #004165;
+    color: #FFCB05;
+}
+
+body.dark #main-content h1 {
+    color: #FFCB05;
+}
+
+body.dark p{
+    color: #ddd;
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+    color: #FFCB05;
+}
+
+body.dark a {
+    color: #ddd;
+}
+
+body.dark button {
+    background-color: #141414;
+    color: #ddd;
+}
+
+body.dark button:hover {
+    background-color: #141414;
+}
+
+/* Media Queries for Tablets*/
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 3fr; /* Two columns for larger screens */
+        overflow-x: hidden; 
+    }
+
+    nav ul {
+        display: flex; /* Switches to flex for better horizontal layout */
+        gap: 90px;
+        justify-content: center;
+    }
+
+    header {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2.25em;
+    }
+
+    p {
+        font-size: 1.125em;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      }
+
+}
+
+/* Media Queries for Desktops */
+@media (min-width: 1024px) {
+    body {
+        grid-template-columns: 1fr 3fr; /* Three columns for large screens */
+        overflow-x: hidden; 
+    }
+
+    nav ul {
+        /* grid-template-columns: repeat(4, 1fr); */
+        display: flex; /* Switches to flex for better horizontal layout */
+        gap: 90px;
+        justify-content: center;
+    }
+
+    header {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      }
+}
+
+
+
+/* 
+h1 {
+    font-size: 4em;
+    margin: 0.67em 0;
+    font-weight: bold;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color:rgb(14, 92, 92)
+
+}
+
+h2{
+	font-size: 2em;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+
+h3{
+	font-size: 1em;
+    font-family:'Courier New', Courier, monospace; 
+}
+
+body{
+	margin:12%;
+	font-size:125%;
+    background-color:rgb(151, 229, 226);
+    align-items: center;
+    word-wrap: break-word;
+} */
+
+/* img{
+    width: 100%;
+    padding: 25px;
+} */
+
+/* p {
+    padding-bottom: 10px;
+    word-wrap: normal;
+    line-height: 1.5;
+} */
+
+
+
+ /* height: 400px; */
+     /* margin: 20px;
+    margin-left: 10%; */
+        /* margin: 5px;
+	margin-left: 10% */

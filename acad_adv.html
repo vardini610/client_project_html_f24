@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Academic Advising at UMSI</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href= "acad_adv.html" class="active">Academic Advising</a></li>
+                <li><a href = "maize.html">Foodpantry</a></li>
+                <li><a href = "cew.html">CEW+</a></li>
+            </ul>
+        </nav>
+        <h1>Academic Advising at UMSI</h1>
+
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+    </header>
+    <main id="main-content">
+        <div>
+            <p>At the University of Michigan School of Information (UMSI), we are committed to supporting our students' academic success by offering a wide array of resources and services. Our academic advising team provides personalized guidance to help you navigate your curriculum, select courses, and address any academic challenges or questions you may encounter during your studies. UMSI students also have access to the extensive collections and study spaces within the University Library system, offering both digital and physical resources essential for research and coursework. Additionally, our specialized tutoring services and the UMSI Writing Center are available to support you in mastering complex subjects and enhancing your written communication skills. By utilizing these academic resources, UMSI students can thrive in their studies and achieve their educational goals. </p>
+            <img src="images/UMSI_MHIClassroom_02202023_12.jpg" alt="UMSI Classroom" class="centered-image">
+
+            <section id="news">    
+                <h2>News and Updates</h2>
+                <ul>
+                    <li><a href="#">Register for the Oct18 - Academic Success Workshop</a></li>
+                    <li><a href="#">Upcoming Course Registration Deadlines</a></li>
+                    <li><a href="#">New Advising Tools Now Available</a></li>
+                    <li><a href="#">Spring 2024 Graduation Planning Sessions</a></li>
+                </ul>
+            </section>
+
+            <section id="advisors">
+                <h2>Meet the Advisors</h2>
+                <p>Our team of experienced academic advisors is dedicated to helping you achieve your goals. Get to know our advisors and learn how they can support your academic and professional development.</p>
+                <img src="images/Natalie.jpg" alt="Natalie Drobny" class="centered-image">
+
+                <p>MSI Academic Advisor she/her/hers</p>
+            </section>
+    
+            <section id="appointments">
+                <h2>Appointments</h2>
+                <p>Scheduling an appointment with an academic advisor is easy. Whether you prefer in-person meetings or virtual consultations, we're here to accommodate your needs. Click here to book your appointment today.</p>
+
+                <ul>
+                    <li><a href=" https://sites.google.com/umich.edu/msiacademicadvising/academic-advising/connecting-with-an-advisor?authuser=4#h.lcgqiu841yjy">Scheduled 1:1 Appointments</a></li>
+                    <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/academic-advising/connecting-with-an-advisor?authuser=4#h.daccan6wpf1a">Drop-In 1:1 Appointments</a></li>
+                    <li>You can reach us via email at <a href="mailto:umsi.advising.msi@umich.edu">umsi.advising.msi@umich.edu</a></li>
+                </ul>
+
+                <p>Advising Business Hours - Monday through Friday from 9:00 to 5:00 PM (ET)</p>
+                <img src="images/UMSI_Classroom_2.jpg" alt="UMSI students in classroom" class="centered-image">
+
+            </section>
+    
+            <section id="resources">
+                <h2>Advising Resources</h2>
+                <p>UMSI offers a wide range of resources to support your academic success. From course planning tools to career development workshops, you'll find everything you need to thrive as a student.</p>
+
+                <ul>
+                    <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources?authuser=4#h.fj4y5zh1j24r">Academic Resources</a></li>
+                    <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources?authuser=4#h.jzx854necjcz">Health & Welness Resources</a></li>
+                    <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources?authuser=4#h.3nr6vpg64ccd">Community Building Resources</a></li>
+                    <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources?authuser=4#h.rfdfal1x4n8z">Additional Services</a></li>
+                    <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources?authuser=4#h.y7jdmkk41365">Emergency & Supportive Contacts</a></li>
+                </ul>
+
+                <img src="images/UMSI_Fallcampus.jpg" alt="UMSI North Quad">
+            </section>
+
+            <section id="testimonials">
+                <h2>Student Testimonials</h2>
+                <blockquote>
+                    <p>"The advising team at UMSI has been incredibly supportive throughout my studies. Their guidance helped me choose the right courses and plan my career path."</p>
+                    <footer>— Jane Doe, UMSI Class of 2024</footer>
+                </blockquote>
+            </section>
+
+            <section id="contact">
+                <h3>Contact Us</h3>
+                <p>Have questions? Reach out to us at <a href="mailto:umsi.advising.msi@umich.edu">umsi.advising.msi@umich.edu</a> or visit our office in the North Quad building.</p>
+            </section>
+
+        </div>
+
+        <script>
+            // JavaScript to toggle dark mode
+        const toggleButton = document.getElementById('dark-mode-toggle');
+
+        // Check if user prefers dark mode in the system
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Set initial mode based on system preference
+        if (prefersDark) {
+            document.body.classList.add('dark');
+        }
+
+        // Toggle the 'dark' class on button click
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark'); // Toggle dark mode
+            const isDarkMode = document.body.classList.contains('dark');
+            toggleButton.textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+        });
+        </script>
+    
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> MSI Academic Advising | University of Michigan</p>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+        <!-- <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p> -->
+    </footer>
+    
+</body>
+
+</html>

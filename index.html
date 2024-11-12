@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Student Success Portal</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <header>
+        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <nav>
+            <ul>
+                <li><a href = "index.html" class="active">Home</a></li>
+                <li><a href = "acad_adv.html">Academic Advising</a></li>
+                <li><a href = "maize.html">Foodpantry</a></li>
+                <li><a href = "cew.html">CEW+</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <button id="dark-mode-toggle">Switch to Dark Mode</button>
+        </div>
+        
+
+    </header>
+    <main id="main-content">
+        <h1>Student Success Portal</h1>
+        <section>
+            <h2>Welcome to the UM Grad Success Navigator</h2>
+            <p> Your Comprehensive Guide to Resources for Graduate School Success</p>
+            <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
+            <ol>
+                <li>Academic Resources</li>
+                <li>Physical Health</li>
+                <li>Mental Health</li>
+                <li>Life Outside Classroom</li>
+                <li>Contact</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Physical Health</h2>
+            <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition:</p>
+            <article>
+                <h3>University Health Service (UHS)</h3>
+                <figure>
+                    <img src="images/UHS.jpg" alt="University Health Services building">
+                    <figcaption>University Health Services Building</figcaption>
+                </figure>
+                <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
+            </article>
+            <article>
+                <h3>Recreational Sports</h3>
+                <figure>
+                    <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
+                    <figcaption>UMSI out in the fall!</figcaption>
+                </figure>
+                <p>Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and healthy.</p>
+            </article>
+        </section>
+        
+        <section>
+            <h2>Mental Health</h2>
+            <p>Maintaining your mental well-being is crucial for thriving in graduate school. Here are resources to support your mental health:</p>
+            <article>
+                <h3>Counseling and Psychological Services (CAPS):</h3>
+                <p> Access individual counseling, group therapy, workshops, and crisis intervention services.</p>
+            </article>
+            <article>
+                <h3>Wellness Coaching:</h3>
+
+                <p>Work with a wellness coach to develop strategies for managing stress, time, and overall well-being.</p>
+            </article>
+            <article>
+                <h3>Mindfulness Resources:</h3>
+
+                <p> Participate in mindfulness and meditation sessions to cultivate a calm and focused mind.</p>
+            </article>
+            <article>
+                <h3>Support Groups:</h3>
+
+                <p> Join peer support groups for shared experiences and collective coping strategies.</p>
+            </article>
+        </section>
+
+        
+        <section id="life-outside-classroom">
+            <h2>Life Outside the Classroom</h2>
+            <p>Graduate school is more than just academics. It's important to cultivate a balanced life. Here are some resources to help you enjoy life outside the classroom:</p>
+            <ul>
+                <li><strong>Student Organizations:</strong> Join one of the many student organizations to connect with peers who share your interests and passions.</li>
+                <li><strong>Arts and Culture:</strong> Explore UM's vibrant arts scene with events, exhibitions, and performances happening year-round.</li>
+                <li><strong>Career Services:</strong> Utilize career counseling, job search resources, and networking opportunities to prepare for your professional future.</li>
+                <li><strong>Community Engagement:</strong> Get involved with local volunteering opportunities and community service projects to make a positive impact.</li>
+                <li><strong>Housing and Dining:</strong> Find information on on-campus housing options and dining services to ensure a comfortable living experience.</li>
+            </ul>
+        </section>
+
+        <section class="photo-gallery">
+            <img src="images/Fun4.jpg" alt="Michigan band" width="100%" height="auto">
+            <img src="images/Fun5.jpg" alt="Museum" width="100%" height="auto">
+            <img src="images/Fun6.jpg" alt="Singing" width="100%" height="auto">
+            <img src="images/Fun7.jpg" alt="Badminton" width="100%" height="auto">
+            <img src="images/Fun8.jpg" alt="Students Sitting under a tree" width="100%" height="auto">
+            <img src="images/Fun9.jpg" alt="Girl eating" width="100%" height="auto">
+        </section>
+        <!-- Content taken & modified from UMGPT with the prompt, "write me a webpage of intro content to help University of Michigan Master's students navigate different resources for being successful in grad school - this will include academic resources, physical health resources, mental health resources, support for life outside the classroom"
+        UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
+        <!-- <script src="script.js"></script> Or paste the script below -->
+        <!-- <script>
+            const themeToggleButton = document.getElementById('theme-toggle');
+
+            // Check for the stored theme preference in local storage
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(currentTheme);
+            themeToggleButton.textContent = currentTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+
+            // Toggle the theme when the button is clicked
+            themeToggleButton.addEventListener('click', () => {
+                const newTheme = document.body.classList.contains('light') ? 'dark' : 'light';
+                document.body.classList.remove('light', 'dark');
+                document.body.classList.add(newTheme);
+                
+                // Update the text of the toggle button
+                themeToggleButton.textContent = newTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+                
+                // Store the user's theme preference in local storage
+                localStorage.setItem('theme', newTheme);
+            });
+        </script> -->
+
+        <script>
+            // JavaScript to toggle dark mode
+        const toggleButton = document.getElementById('dark-mode-toggle');
+
+        // Check if user prefers dark mode in the system
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Set initial mode based on system preference
+        if (prefersDark) {
+            document.body.classList.add('dark');
+        }
+
+        // Toggle the 'dark' class on button click
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark'); // Toggle dark mode
+            const isDarkMode = document.body.classList.contains('dark');
+            toggleButton.textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+        });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Student Success Portal | University of Michigan</p>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    </footer>
+</body>
+</html>

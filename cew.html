@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <title>CEW+ | Center for the Education of Women</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "acad_adv.html">Academic Advising</a></li>
+                <li><a href = "maize.html">Foodpantry</a></li>
+                <li><a href= "cew.html" class="active">CEW+</a></li>
+            </ul>
+        </nav>
+        <h1>CEW+ | Center for the Education of Women</h1>
+        <p class="descr">Empowering Women and Underrepresented Communities at U-M</p>
+
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+    </header>
+    
+    <main id="main-content">
+        <h2>Welcome!</h2>
+        <p>CEW+ is dedicated to empowering women and underserved communities at the University of Michigan by offering a range of programs, scholarships, and resources designed to support personal, academic, and professional development.</p>
+
+        <h2>Our Mission</h2>
+        <p>Our mission is to address the challenges and opportunities faced by women and other underrepresented groups at U-M. We provide comprehensive support services, including counseling, career development, and financial assistance.</p>
+
+        <img src="images/CEW1.jpg" alt="Graduation cap">
+
+        <section id="news">    
+            <h2>News and Updates</h2>
+            <ul>
+                <li><a href="#">“Let no one tell her otherwise”: Remembering Jane M. Bloom, 1924-2022 |
+                    May 28, 2024</a></li>
+                <li><a href="#">CEW+ Celebrates 2023-24 Graduates |
+                    May 15, 2024</a></li>
+                <li><a href="#">CEW+ News: Spring 2024 |
+                    April 17, 2024</a></li>
+                <li><a href="#">Support CEW+ on Giving Blueday! |
+                    March 12, 2024</a></li>
+            </ul>
+        </section>
+
+        <img src="images/CEW2.jpg" alt="Classroom speech">
+
+        <section id="events">
+            <h2>Events & Workshops</h2>
+            <ul>
+                <li><a href="https://www.cew.umich.edu/events/virtual-cewinspire-midweek-mindfulness-guided-sit-august-28/">
+                    VIRTUAL | CEW+Inspire Midweek Mindfulness Guided Sit </a>|
+                    August 28, 2024 |
+                    12:15 pm - 12:45 pm
+                    </li>
+                <li><a href="https://www.cew.umich.edu/events/co-sponsored-event-pride-outside-lgbtqia2s-welcome/">CO-SPONSORED EVENT | Pride Outside: LGBTQIA2S+ Welcome </a> |
+                    September 1, 2024 |
+                    2:00 pm - 4:30 pm |
+                    Ingalls Mall</li>
+                <li><a href="https://www.cew.umich.edu/events/virtual-cewinspire-midweek-mindfulness-guided-sit-september-4/">VIRTUAL | CEW+Inspire Midweek Mindfulness Guided Sit</a> |
+                    September 4, 2024 |
+                    12:15 pm - 12:45 pm </li>
+                <li><a href="#">COUNTS Resource Fair & Dinner </a> |
+                    September 12, 2024 |
+                    5:00 pm - 7:00 pm |
+                    Hatcher Library Gallery, Hatcher Library North, First Floor, Room 100</li>
+            </ul>
+        </section>  
+        
+        <img src="images/Campus_garden.jpg" alt="Campus Garden">
+
+        <section id="counseling">
+            <h2>Counseling</h2>
+            <p>Schedule an Appointment | There are three ways to schedule an appointment.</p>
+            <ul>
+                <li>Fill out this <a href="">online form</a>. A member of our team will be in touch (via phone or email – your choice) to formally schedule your appointment within 24 hours of the next business day once the form is submitted and reviewed.Schedule an appointment online</li>
+                <li>Call 734-764-6360 between 8:30 am and 4:30 pm Monday-Friday. If you get voicemail, please leave a message and we will return your voicemail as quickly as possible.</li>
+                <li>Email us at <a href="mailto:cew.appts@umich.edu">cew.appts@umich.edu </a>. Please be advised that depending on response rates to emails, you may not get the first available appointment offered.</li>
+            </ul>
+            
+            <h3>Our Counseling Services</h3>
+            <ul>
+                <li>Career counseling</li>
+                <li>Education Counseling</li>
+                <li>Emergency funding for current U-M Ann Arbor students</li>
+            </ul>
+            <!-- <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="UMSI Campus Fall" width="70%" height="auto"> -->
+        </section>
+
+        <img src="images/UMSI_NQ_2.jpg" alt="North Quad">
+
+        <h2>Get Involved</h2>
+        <p>CEW+ offers many opportunities to get involved and make a difference. Whether you’re interested in volunteering, attending events, or applying for a scholarship, we invite you to be part of our community. <a href="https://www.cew.umich.edu/join-cew/">Join Us here</a></p>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? <a href="tel:7347646360"> Reach out to us </a> or visit our office at 330 E. Liberty Street.</p>
+        </section>
+
+        <script>
+            // JavaScript to toggle dark mode
+        const toggleButton = document.getElementById('dark-mode-toggle');
+
+        // Check if user prefers dark mode in the system
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // Set initial mode based on system preference
+        if (prefersDark) {
+            document.body.classList.add('dark');
+        }
+
+        // Toggle the 'dark' class on button click
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark'); // Toggle dark mode
+            const isDarkMode = document.body.classList.contains('dark');
+            toggleButton.textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+        });
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> CEW+ | University of Michigan</p>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    </footer>
+</body>
+</html>
