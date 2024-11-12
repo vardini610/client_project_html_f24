@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +16,21 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+
         .error-message {
             max-width: 500px;
             padding: 20px;
         }
+
         .error-message h1 {
             font-size: 3em;
             color: #004165;
         }
+
         .error-message p {
             font-size: 1.2em;
         }
+
         .error-message a {
             display: inline-block;
             margin-top: 20px;
@@ -35,16 +40,32 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         .error-message a:hover {
             background-color: #006494;
         }
     </style>
 </head>
+
 <body>
     <div class="error-message">
         <h1>404</h1>
         <p>Oops! The page you're looking for doesn't exist.</p>
         <a href="/">Return Home</a>
     </div>
+    <script>
+        // JavaScript to toggle dark mode with local storage
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) document.body.classList.add(savedTheme);
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const currentTheme = document.body.classList.contains('dark') ? 'dark' : '';
+            localStorage.setItem('theme', currentTheme);
+            toggleButton.textContent = currentTheme ? "Switch to Light Mode" : "Switch to Dark Mode";
+        });
+    </script>
 </body>
+
 </html>
